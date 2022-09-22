@@ -11,12 +11,18 @@
 # Output
 # For each of the N triples, output one new line which contains the second-maximum integer among the three.
 
-def second_max(num1 = int, num2 = int, num3 = int):
-    numlist = [num1, num2, num3]
+def second_max(numlist = list):
     maxnum = max(numlist)
     minnum = min(numlist)
     numlist.remove(maxnum)
     numlist.remove(minnum)
     return numlist[0]
 
-#print(second_max(100, 999, 500))
+output_nums = []
+n = int(input())
+for i in range(0, n):
+    userlist = list(int(num) for num in input().strip().split())[:n]
+    output_nums.append(second_max(userlist))
+
+for i in output_nums:
+    print(i)
