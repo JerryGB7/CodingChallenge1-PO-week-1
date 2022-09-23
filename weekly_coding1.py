@@ -21,7 +21,7 @@ def second_max(numlist = list):
 output_nums = []
 n = int(input())
 for i in range(0, n):
-    userlist = list(int(num) for num in input().strip().split())[:n]
+    userlist = list(int(num) for num in input().strip().split())
     output_nums.append(second_max(userlist))
 
 for i in output_nums:
